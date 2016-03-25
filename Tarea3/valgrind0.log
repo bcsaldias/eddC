@@ -1,0 +1,94 @@
+==8390== Memcheck, a memory error detector
+==8390== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
+==8390== Using Valgrind-3.10.0.SVN and LibVEX; rerun with -h for copyright info
+==8390== Command: ./tarea2 0 blanco.bmp comprimidobelen
+==8390== Parent PID: 7678
+==8390== 
+--8390-- 
+--8390-- Valgrind options:
+--8390--    -v
+--8390--    --tool=memcheck
+--8390--    --leak-check=full
+--8390--    --num-callers=40
+--8390--    --log-file=valgrind0.log
+--8390-- Contents of /proc/version:
+--8390--   Linux version 3.19.0-25-generic (buildd@lgw01-57) (gcc version 4.8.2 (Ubuntu 4.8.2-19ubuntu1) ) #26~14.04.1-Ubuntu SMP Fri Jul 24 21:18:00 UTC 2015
+--8390-- Arch and hwcaps: X86, x86-mmxext-sse1-sse2
+--8390-- Page sizes: currently 4096, max supported 4096
+--8390-- Valgrind library directory: /usr/lib/valgrind
+--8390-- Reading syms from /lib/i386-linux-gnu/ld-2.19.so
+--8390--   Considering /lib/i386-linux-gnu/ld-2.19.so ..
+--8390--   .. CRC mismatch (computed 19686c0d wanted 131a893d)
+--8390--   Considering /usr/lib/debug/lib/i386-linux-gnu/ld-2.19.so ..
+--8390--   .. CRC is valid
+--8390-- Reading syms from /home/belencarolina/Escritorio/varios/Tarea 2 EDD/tarea2
+--8390-- Reading syms from /usr/lib/valgrind/memcheck-x86-linux
+--8390--   Considering /usr/lib/valgrind/memcheck-x86-linux ..
+--8390--   .. CRC mismatch (computed e09cad6a wanted c3463efc)
+--8390--    object doesn't have a symbol table
+--8390--    object doesn't have a dynamic symbol table
+--8390-- Scheduler: using generic scheduler lock implementation.
+--8390-- Reading suppressions file: /usr/lib/valgrind/default.supp
+==8390== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-8390-by-belencarolina-on-???
+==8390== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-8390-by-belencarolina-on-???
+==8390== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-8390-by-belencarolina-on-???
+==8390== 
+==8390== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==8390== don't want to do, unless you know exactly what you're doing,
+==8390== or are doing some strange experiment):
+==8390==   /usr/lib/valgrind/../../bin/vgdb --pid=8390 ...command...
+==8390== 
+==8390== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==8390==   /path/to/gdb ./tarea2
+==8390== and then give GDB the following command
+==8390==   target remote | /usr/lib/valgrind/../../bin/vgdb --pid=8390
+==8390== --pid is optional if only one valgrind process is running
+==8390== 
+--8390-- REDIR: 0x4017ed0 (strlen) redirected to 0x38066872 (???)
+--8390-- REDIR: 0x4017ce0 (index) redirected to 0x3806684d (???)
+--8390-- Reading syms from /usr/lib/valgrind/vgpreload_core-x86-linux.so
+--8390--   Considering /usr/lib/valgrind/vgpreload_core-x86-linux.so ..
+--8390--   .. CRC mismatch (computed da218fa9 wanted d8f40358)
+--8390--    object doesn't have a symbol table
+--8390-- Reading syms from /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so
+--8390--   Considering /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so ..
+--8390--   .. CRC mismatch (computed f1cf8ee0 wanted 71765c70)
+--8390--    object doesn't have a symbol table
+==8390== WARNING: new redirection conflicts with existing -- ignoring it
+--8390--     old: 0x04017ed0 (strlen              ) R-> (0000.0) 0x38066872 ???
+--8390--     new: 0x04017ed0 (strlen              ) R-> (2007.0) 0x0402d480 strlen
+--8390-- Reading syms from /lib/i386-linux-gnu/libm-2.19.so
+--8390--   Considering /lib/i386-linux-gnu/libm-2.19.so ..
+--8390--   .. CRC mismatch (computed e79387ba wanted 6c7b6053)
+--8390--   Considering /usr/lib/debug/lib/i386-linux-gnu/libm-2.19.so ..
+--8390--   .. CRC is valid
+--8390-- Reading syms from /lib/i386-linux-gnu/libc-2.19.so
+--8390--   Considering /lib/i386-linux-gnu/libc-2.19.so ..
+--8390--   .. CRC mismatch (computed da700b2f wanted 551922c7)
+--8390--   Considering /usr/lib/debug/lib/i386-linux-gnu/libc-2.19.so ..
+--8390--   .. CRC is valid
+--8390-- REDIR: 0x410cde0 (strnlen) redirected to 0x4024580 (_vgnU_ifunc_wrapper)
+--8390-- REDIR: 0x410ed90 (strncasecmp) redirected to 0x4024580 (_vgnU_ifunc_wrapper)
+--8390-- REDIR: 0x4114710 (memrchr) redirected to 0x4024580 (_vgnU_ifunc_wrapper)
+--8390-- REDIR: 0x4127750 (wcslen) redirected to 0x4024580 (_vgnU_ifunc_wrapper)
+--8390-- REDIR: 0x410cf90 (__GI_strrchr) redirected to 0x402ce50 (__GI_strrchr)
+--8390-- REDIR: 0x410c580 (strcmp) redirected to 0x4024580 (_vgnU_ifunc_wrapper)
+--8390-- REDIR: 0x41cbad0 (__strcmp_ssse3) redirected to 0x402e5b0 (strcmp)
+--8390-- REDIR: 0x41086b0 (malloc) redirected to 0x402a110 (malloc)
+--8390-- REDIR: 0x410ccd0 (strlen) redirected to 0x4024580 (_vgnU_ifunc_wrapper)
+--8390-- REDIR: 0x4114e70 (__strlen_sse2_bsf) redirected to 0x402d3e0 (strlen)
+--8390-- REDIR: 0x4110cd0 (strchrnul) redirected to 0x4030e50 (strchrnul)
+--8390-- REDIR: 0x410db60 (strstr) redirected to 0x4031460 (strstr)
+--8390-- REDIR: 0x410ef50 (__GI_memcpy) redirected to 0x402f090 (__GI_memcpy)
+--8390-- REDIR: 0x4108c60 (free) redirected to 0x402b370 (free)
+--8390-- REDIR: 0x410cd20 (__GI_strlen) redirected to 0x402d400 (__GI_strlen)
+--8390-- REDIR: 0x4110c00 (__GI___rawmemchr) redirected to 0x4030ea0 (__GI___rawmemchr)
+==8390== 
+==8390== HEAP SUMMARY:
+==8390==     in use at exit: 0 bytes in 0 blocks
+==8390==   total heap usage: 2,986,103 allocs, 2,986,103 frees, 59,722,439 bytes allocated
+==8390== 
+==8390== All heap blocks were freed -- no leaks are possible
+==8390== 
+==8390== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==8390== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
